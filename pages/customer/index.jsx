@@ -71,7 +71,7 @@ const List = ({ shops }) => {
                                 class="px-2 py-1 rounded-full text-black-500 bg-green-400 font-semibold text-sm flex align-center w-max cursor-pointer transition duration-300 ease">
                                 New
                             </span>}
-                            <Image src={shop.shopImage} />
+                            <Image loader={() => shop.shopImage} src={shop.shopImage} width={376} height={190}/>
                             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <p style={{ fontWeight: "bolder" }}>{shop.shopID}</p>
                                 <div className="grid grid-cols-2 gap-1" style={{ direction: 'rtl' }}>
