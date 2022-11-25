@@ -16,6 +16,8 @@
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
+    "@syncfusion/ej2": "^19.4.48",
+    "@syncfusion/ej2-react-charts":"^19.4.50",
     "axios": "^1.0.0",
     "chart.js": "^3.9.1",
     "cross-env": "^7.0.3",
