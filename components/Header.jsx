@@ -10,6 +10,7 @@ import {AiFillCaretDown} from 'react-icons/ai'
 import {IoIosNotifications} from 'react-icons/io'
 
 import {useRouter} from "next/router"
+import Link from 'next/link';
 
 const Header = ({sidebarOpen,setSidebarOpen}) => {
 
@@ -56,20 +57,20 @@ const Header = ({sidebarOpen,setSidebarOpen}) => {
           <div className={`nav_dropLinks ${active && router.pathname!=="/dashboard"?'show':'hide'} `}>
               <div className="absolute top-20 left-0 right-0 w-full px-2 rounded-b-md">
                   <ul className="bg-gray-200 flex flex-col items-center text-lg rounded-md transition-all">
-                      <li className="p-1 cursor-pointer hover:text-black"><a href="/ourmission" className="hover:text-black">Our mission</a></li>
-                      <li className="p-1 cursor-pointer hover:text-black"><a href="/aboutus" className="hover:text-black">About us</a></li>
-                      <li className="p-1 cursor-pointer hover:text-black"><a href="/ourservices" className="hover:text-black">Our services</a></li>
-                      <li className="p-1 cursor-pointer hover:text-black"><a href="/whyus" className="hover:text-black">Why us?</a></li>
+                      <li className="p-1 cursor-pointer hover:text-black"><Link href="/ourmission" className="hover:text-black">Our mission</Link></li>
+                      <li className="p-1 cursor-pointer hover:text-black"><Link href="/aboutus" className="hover:text-black">About us</Link></li>
+                      <li className="p-1 cursor-pointer hover:text-black"><Link href="/ourservices" className="hover:text-black">Our services</Link></li>
+                      <li className="p-1 cursor-pointer hover:text-black"><Link href="/whyus" className="hover:text-black">Why us?</Link></li>
                   </ul>
               </div>
             </div>
             <div className="nav_horizontalLinks" >
               {router.pathname==="/dashboard" ? <></> : 
                 <ul className="flex gap-4">
-                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><a href="/ourmission" className="hover:text-black">Our mission</a></li>
-                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><a href="/aboutus" className="hover:text-black">About us</a></li>
-                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><a href="/ourservices" className="hover:text-black">Our services</a></li>
-                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><a href="/whyus" className="hover:text-black">Why us?</a></li>
+                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><Link href="/ourmission" className="hover:text-black">Our mission</Link></li>
+                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><Link href="/aboutus" className="hover:text-black">About us</Link></li>
+                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><Link href="/ourservices" className="hover:text-black">Our services</Link></li>
+                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><Link href="/whyus" className="hover:text-black">Why us?</Link></li>
                 </ul>
               }
             </div>
@@ -112,8 +113,8 @@ const Header = ({sidebarOpen,setSidebarOpen}) => {
                         </div>
                         :
                         <div className="flex items-center gap-3">
-                            <a href="/login"><li className="mt-2 flex gap-2 items-center hover:text-black cursor-pointer"><span>Login</span></li></a>
-                            <a href="/signup"><li className="mt-2 flex gap-2 border border-gray-400 rounded-md p-2 items-center hover:border-black hover:text-black cursor-pointer"><span>Sign up</span></li></a>
+                            <Link href="/login"><li className="mt-2 flex gap-2 items-center hover:text-black cursor-pointer"><span>Login</span></li></Link>
+                            <Link href="/signup"><li className="mt-2 flex gap-2 border border-gray-400 rounded-md p-2 items-center hover:border-black hover:text-black cursor-pointer"><span>Sign up</span></li></Link>
                         </div>
                     }
                     {router.pathname==="/dashboard" ? <></> :

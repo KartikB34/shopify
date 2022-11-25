@@ -16,6 +16,7 @@ const Users = () => {
 
   const usersData = [
     {
+        id:1,
         image: raees,
         name: "Raees Alam (you)",
         email:"raees786@ameen.com",
@@ -23,6 +24,7 @@ const Users = () => {
         position: "Owner",
     },
     {
+        id:2,
         image: sadiq,
         name: "Sadiq",
         email:"sadiq@ameen.com",
@@ -30,6 +32,7 @@ const Users = () => {
         position: "Manager",
     },
     {
+        id:3,
         image: aasiya,
         name: "Aasiya Raees Alam",
         email:"aasiya786@ameen.com",
@@ -76,7 +79,7 @@ const Users = () => {
             
 
             {usersData.map((user,i) => (
-              <tbody className="divide-y divide-gray-100 ">
+              <tbody key={user.id} className="divide-y divide-gray-100 ">
                 <tr className="bg-white justify-center">
                   <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
                     {i + 1}
@@ -125,7 +128,7 @@ const Users = () => {
 
         <div className="flex flex-col w-full md:hidden">
           {usersData.map((user,i)=> (
-            <div className="bg-white space-y-3 p-4 my-2 rounded-lg shadow">
+            <div key={user.id} className="bg-white space-y-3 p-4 my-2 rounded-lg shadow">
               <div className="flex justify-between items-center">
                 <Image src={user.image} alt={user.name} className="h-[4rem] w-[4rem] sm:h-[6rem] rounded-full" />
                 <div className="flex flex-col text-left w-[60%] text-sm">

@@ -23,7 +23,7 @@ const DashHome = () => {
     <div className='p-8'>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center'>
         <div className='col-span-1 border shadow-lg rounded-md pt-3 m-2 text-left pl-8 pr-12'>
-          <p className='text-xl font-semibold'>Today's sales</p>
+          <p className='text-xl font-semibold'>Today&apos;s sales</p>
           <p className='border-b pb-2'>total sales</p>
           <p className='p-8 text-2xl text-center'>10K</p>
         </div>
@@ -34,12 +34,12 @@ const DashHome = () => {
         </div>
         <div className='col-span-1 border shadow-lg rounded-md pt-3 m-2 text-left pl-8 pr-12'>
           <p className='text-xl font-semibold'>Monthly sale</p>
-          <p className='border-b pb-2'>October's total</p>
+          <p className='border-b pb-2'>October&apos;s total</p>
           <p className='p-8 text-2xl text-center'>10.1L</p>
         </div>
         <div className='col-span-1 border shadow-lg rounded-md pt-3 m-2 text-left pl-8 pr-12'>
           <p className='text-xl font-semibold'>Inventory turnover ratio</p>
-          <p className='border-b pb-2'>this month's</p>
+          <p className='border-b pb-2'>this month&apos;s</p>
           <p className='p-8 text-2xl text-center'>0.84%</p>
         </div>
       </div>
@@ -57,7 +57,7 @@ const DashHome = () => {
               </div>
 
               {/* Sorting first then slicing only 5 items */}
-              {inventory.sort((a, b) => parseFloat(a.in_inventory) - parseFloat(b.in_inventory)).slice(0,5).map((item) => ( item.in_inventory < 10 ? <div className='flex justify-between'>
+              {inventory.sort((a, b) => parseFloat(a.in_inventory) - parseFloat(b.in_inventory)).slice(0,5).map((item) => ( item.in_inventory < 10 ? <div key={item.name} className='flex justify-between'>
                 <p>{++i}</p>
                 <p>{item.name}</p>
                 <p className='text-gray-800'>{item.in_inventory}</p>
@@ -71,7 +71,7 @@ const DashHome = () => {
             <p className='text-xl font-semibold flex items-center'>Best sold product <AiTwotoneStar className='ml-2 text-amber-400' /></p>
             <p className='border-b pb-2'>Last month</p>
             
-            {inventory.sort((a, b) => parseFloat(b.sold) - parseFloat(a.sold)).slice(0,1).map((item) => (<div className='flex my-3 items-center flex-col xl:flex-row xl:justify-between'>
+            {inventory.sort((a, b) => parseFloat(b.sold) - parseFloat(a.sold)).slice(0,1).map((item) => (<div key={item.name} className='flex my-3 items-center flex-col xl:flex-row xl:justify-between'>
                 <Image src={item.image} alt={item.name} className="w-[10rem] rounded-full object-cover shadow shadow-amber-400" />
                 <div>
                   <p>Name: {item.name}</p>
@@ -91,7 +91,7 @@ const DashHome = () => {
                 <p>Item name</p>
             </div>
             
-            {trends.map((item, i) =>( <div className='flex justify-between'>
+            {trends.map((item, i) =>( <div key={item.name} className='flex justify-between'>
               <p>{i+1}</p>
               <p>{item}</p>
             </div>))}

@@ -71,7 +71,7 @@ const List = ({items, setItems, type, setType, setState}) => {
             
 
             {items.map((item,i) => ( (type === item.type || type ==="All" || type==="st") &&
-              <tbody className="divide-y divide-gray-100 ">
+              <tbody key={item.name} className="divide-y divide-gray-100 ">
                 <tr className="bg-white justify-center">
                   <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
                     {i + 1}
@@ -122,7 +122,7 @@ const List = ({items, setItems, type, setType, setState}) => {
 
         <div className="flex flex-col w-full md:hidden">
           {items.map((item,i)=> ( (type === item.type || type ==="All" || type==="st") &&
-            <div className="bg-white space-y-3 p-4 my-2 rounded-lg shadow">
+            <div key={item.name} className="bg-white space-y-3 p-4 my-2 rounded-lg shadow">
               <div className="flex justify-between items-center">
                 <Image src={item.image} alt={item.name} className="h-[4rem] w-[4rem] sm:h-[6rem] rounded-full" />
                 <div className="flex flex-col text-left w-[60%] text-sm">

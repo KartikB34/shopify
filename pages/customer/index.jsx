@@ -5,6 +5,7 @@ import { RiQrScan2Line } from 'react-icons/ri';
 
 import {useRouter} from "next/router";
 import { useRouteError } from "react-router-dom";
+import Image from "next/image";
 const List = ({ shops }) => {
 
     const router = useRouter();
@@ -70,7 +71,7 @@ const List = ({ shops }) => {
                                 class="px-2 py-1 rounded-full text-black-500 bg-green-400 font-semibold text-sm flex align-center w-max cursor-pointer transition duration-300 ease">
                                 New
                             </span>}
-                            <img src={shop.shopImage} />
+                            <Image src={shop.shopImage} />
                             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <p style={{ fontWeight: "bolder" }}>{shop.shopID}</p>
                                 <div className="grid grid-cols-2 gap-1" style={{ direction: 'rtl' }}>

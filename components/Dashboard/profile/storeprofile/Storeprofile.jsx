@@ -32,7 +32,7 @@ const Storeprofile = ({store, setStore}) => {
         {/*ratings*/}
         <div className='flex items-center'>
           {iter.map((it) => (
-            <div>
+            <div key={it}>
               {it<store.ratings? <AiFillStar className="text-2xl text-amber-500"/> : <AiOutlineStar className="text-2xl text-amber-500"/>}
             </div>
           ))}
@@ -88,7 +88,7 @@ const Storeprofile = ({store, setStore}) => {
         {/*ratings*/}
         <div className='flex items-center mb-8'>
           {iter.map((it) => (
-            <div>
+            <div key={it}>
               {it<store.ratings? <AiFillStar className="text-2xl text-amber-500"/> : <AiOutlineStar className="text-2xl text-amber-500"/>}
             </div>
           ))}
