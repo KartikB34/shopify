@@ -1,11 +1,14 @@
 import React from "react";
+import {useRouter} from "next/router"
 
 const List = ({ shops }) => {
+
+    const router = useRouter();
 
     console.log(shops);
 
     const handleClick = (id) => {
-        window.location.href = `https://shopend.netlify.app/customer/${id}`
+        router.push(`/${id}`)
         console.log("clicked")
     }
 
