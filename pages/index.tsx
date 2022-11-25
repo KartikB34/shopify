@@ -7,6 +7,7 @@ import {MdLockOutline} from 'react-icons/md'
 import {FcGoogle} from 'react-icons/fc'
 import {useRouter} from "next/router"
 
+
 const Login = () => {
 
   const router = useRouter();
@@ -27,6 +28,7 @@ const Login = () => {
   return (
     <>
     <div className="mt-16  bg-white">
+      
       <div className='w-full flex flex-col md:flex-row min-h-[80vh] items-center justify-center flex-1 text-center '>
 
       <div className='w-full py-8 md:w-3/5'>
