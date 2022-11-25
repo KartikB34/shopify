@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 
 import BarChart from './BarChart'
 import Linechart from './Linechart'

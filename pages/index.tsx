@@ -15,10 +15,6 @@ const Login = () => {
   const [password, setPass] = useState("");
   const [LoginAs, setLoginAs] = useState("customer");
 
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value.toLowerCase());
-  };
   const handleLogin = () => {
     if(LoginAs==="business"){
       router.push("/dashboard")
@@ -27,10 +23,6 @@ const Login = () => {
     }
     toast.success("Login successful!");
   }
-
-  const handlePassChange = (e) => {
-    setPass(e.target.value);
-  };
 
   return (
     <>
@@ -52,12 +44,12 @@ const Login = () => {
                 <div className='flex flex-col items-center '>
                     <div className='bg-gray-100 w-64 p-2 flex items-center mb-3'>
                         <FaRegEnvelope className='text-gray-400 m-2' />
-                        <input type='email' name='email' value={email} onChange={handleEmailChange} placeholder="Email" className='bg-gray-100 outline-none text-sm flex-1' />
+                        <input type='email' name='email' value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder="Email" className='bg-gray-100 outline-none text-sm flex-1' />
                         {/* using flex-1 above to expand full width */}
                     </div>
                     <div className='bg-gray-100 w-64 p-2 flex items-center mb-3'>
                         <MdLockOutline className='text-gray-400 m-2' />
-                        <input type='password' name='password' value={password} onChange={handlePassChange} placeholder="Password" className='bg-gray-100 outline-none text-sm flex-1' />
+                        <input type='password' name='password' value={password} onChange={(e)=>{setPass(e.target.value)}} placeholder="Password" className='bg-gray-100 outline-none text-sm flex-1' />
                         {/* using flex-1 above to expand full width */}
                     </div>
                     <div className='flex justify-between w-64 mb-5'>

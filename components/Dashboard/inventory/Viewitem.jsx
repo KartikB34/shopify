@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 import {AiOutlineCloseCircle} from "react-icons/ai"
 
@@ -12,7 +13,7 @@ const Viewitem = ({showModal, setShowModal, item}) => {
         <button className='w-full text-right relative' onClick={()=>{setShowModal(false)}}><AiOutlineCloseCircle className='text-2xl right-0 absolute'/></button>
 
         <div className='mt-3 flex flex-col '>
-          <img src={item.image} alt={`${item.name} image`} className="h-[10rem] object-cover" />
+          <Image src={item.image} alt={`${item.name} image`} className="h-[10rem] w-[10rem] object-cover" />
           <p className='my-1'><b>Name:</b>  {item.name}</p>
           <p className='my-1'><b>Type:</b>  {item.type}</p>
           <p className='my-1'><b>Price:</b>  ₹ {item.price}</p>

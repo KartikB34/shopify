@@ -56,20 +56,20 @@ const Header = ({sidebarOpen,setSidebarOpen}) => {
           <div className={`nav_dropLinks ${active && router.pathname!=="/dashboard"?'show':'hide'} `}>
               <div className="absolute top-20 left-0 right-0 w-full px-2 rounded-b-md">
                   <ul className="bg-gray-200 flex flex-col items-center text-lg rounded-md transition-all">
-                      <li className="p-1 cursor-pointer hover:text-black"><a href="/our-mission" className="hover:text-black">Our mission</a></li>
-                      <li className="p-1 cursor-pointer hover:text-black"><a href="/about-us" className="hover:text-black">About us</a></li>
-                      <li className="p-1 cursor-pointer hover:text-black"><a href="/our-services" className="hover:text-black">Our services</a></li>
-                      <li className="p-1 cursor-pointer hover:text-black"><a href="/why-us" className="hover:text-black">Why us?</a></li>
+                      <li className="p-1 cursor-pointer hover:text-black"><a href="/ourmission" className="hover:text-black">Our mission</a></li>
+                      <li className="p-1 cursor-pointer hover:text-black"><a href="/aboutus" className="hover:text-black">About us</a></li>
+                      <li className="p-1 cursor-pointer hover:text-black"><a href="/ourservices" className="hover:text-black">Our services</a></li>
+                      <li className="p-1 cursor-pointer hover:text-black"><a href="/whyus" className="hover:text-black">Why us?</a></li>
                   </ul>
               </div>
             </div>
             <div className="nav_horizontalLinks" >
               {router.pathname==="/dashboard" ? <></> : 
                 <ul className="flex gap-4">
-                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><a href="/our-mission" className="hover:text-black">Our mission</a></li>
-                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><a href="/about-us" className="hover:text-black">About us</a></li>
-                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><a href="/our-services" className="hover:text-black">Our services</a></li>
-                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><a href="/why-us" className="hover:text-black">Why us?</a></li>
+                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><a href="/ourmission" className="hover:text-black">Our mission</a></li>
+                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><a href="/aboutus" className="hover:text-black">About us</a></li>
+                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><a href="/ourservices" className="hover:text-black">Our services</a></li>
+                  <li className="cursor-pointer hover:text-black hover:underline hover:underline-offset-4"><a href="/whyus" className="hover:text-black">Why us?</a></li>
                 </ul>
               }
             </div>
