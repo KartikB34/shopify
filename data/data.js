@@ -1,11 +1,11 @@
 export const stackedChartData = [
   [
-    { x: 'One', y: 2827 },
-    { x: 'Vodka', y: 2439 },
-    { x: 'Martini', y: 2000 },
-    { x: 'Shaken', y: 1704 },
-    { x: 'Not', y: 1600 },
-    { x: 'Stirred', y: 1509 },
+    { x: 'M416', y: 2827 },
+    { x: 'Parle-G', y: 2439 },
+    { x: 'Maggie', y: 2000 },
+    { x: 'Scar-L', y: 1704 },
+    { x: 'Product-A', y: 1600 },
+    { x: 'Product-B', y: 1509 },
     // { x: 'Please', y: 1402 },
   ],
 ];
