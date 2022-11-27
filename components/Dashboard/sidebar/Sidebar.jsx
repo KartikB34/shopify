@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 import { CgInsights } from 'react-icons/cg';
-import {ImProfile} from 'react-icons/im';
+import { ImProfile } from 'react-icons/im';
 import { FiSettings } from 'react-icons/fi';
 import { IoMdArrowBack } from 'react-icons/io';
 import { MdOutlineSpaceDashboard, MdLogout, MdInventory, MdInsights } from 'react-icons/md';
@@ -35,7 +35,7 @@ const Sidebar = ({ option, setOption }) => {
             <MdOutlineSpaceDashboard className="nav-icon" />
           </span>
           <h1
-            className={`${option === "User Dashboard"? "text-black font-semibold" : "text-gray-600"} group-hover:text-black xl:flex hidden`}
+            className={`${option === "User Dashboard" ? "text-black font-semibold" : "text-gray-600"} group-hover:text-black xl:flex hidden`}
           >
             Dashboard
           </h1>
@@ -52,7 +52,7 @@ const Sidebar = ({ option, setOption }) => {
             <MdInventory className="nav-icon" />
           </span>
           <h1
-            className={`${option === "Your Inventory"? "text-black font-semibold" : "text-gray-600"} group-hover:text-black xl:flex hidden`}
+            className={`${option === "Your Inventory" ? "text-black font-semibold" : "text-gray-600"} group-hover:text-black xl:flex hidden`}
           >
             Your Inventory
           </h1>
@@ -68,7 +68,7 @@ const Sidebar = ({ option, setOption }) => {
             <CgInsights className="nav-icon" />
           </span>
           <h1
-            className={`${option === "Customer Insights"? "text-black font-semibold" : "text-gray-600"}  group-hover:text-black xl:flex hidden`}
+            className={`${option === "Customer Insights" ? "text-black font-semibold" : "text-gray-600"}  group-hover:text-black xl:flex hidden`}
           >
             Customer Insights
           </h1>
@@ -85,7 +85,7 @@ const Sidebar = ({ option, setOption }) => {
             <MdInsights className="nav-icon" />
           </span>
           <h1
-            className={`${option === "Sales Insights"? "text-black font-semibold" : "text-gray-600"} group-hover:text-black xl:flex hidden`}
+            className={`${option === "Sales Insights" ? "text-black font-semibold" : "text-gray-600"} group-hover:text-black xl:flex hidden`}
           >
             Sales Insights
           </h1>
@@ -104,7 +104,7 @@ const Sidebar = ({ option, setOption }) => {
             <ImProfile className="nav-icon" />
           </span>
           <h1
-            className={`${option === "Profile"? "text-black font-semibold" : "text-gray-600"}   group-hover:text-black xl:flex hidden`}
+            className={`${option === "Profile" ? "text-black font-semibold" : "text-gray-600"}   group-hover:text-black xl:flex hidden`}
           >
             Profile
           </h1>
@@ -119,7 +119,7 @@ const Sidebar = ({ option, setOption }) => {
             <FiSettings className="nav-icon" />
           </span>
           <h1
-            className={`${option === "Settings"? "text-black font-semibold" : "text-gray-600"}   group-hover:text-black xl:flex hidden`}
+            className={`${option === "Settings" ? "text-black font-semibold" : "text-gray-600"}   group-hover:text-black xl:flex hidden`}
           >
             Settings
           </h1>
@@ -142,7 +142,7 @@ const Sidebar = ({ option, setOption }) => {
         </div>
 
         <div
-          onClick={() => { window.location.href = "http://localhost:3000/customer" }}
+          onClick={() => { router.push("/customer") }}
           className={`w-full flex items-center justify-start space-x-8 px-4 cursor-pointer group hover:border-gray-900 border-l-4 border-transparent ${option === "BackButton" && "border-gray-900"
             }`}
         >
